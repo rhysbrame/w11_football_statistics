@@ -1,18 +1,15 @@
 var app = function(){
-  var url = 'http://api.football-data.org/v1/teams/86';
+  var url = 'http://api.football-data.org/v1/teams/5';
   searchTeam();
   makeRequest(url, requestComplete);
 }
 
 var searchTeam = function(){
-  
   var searchQuery = document.getElementById('search-query');
-
   searchQuery.addEventListener('keyup', function(){
     var url = 'http://api.football-data.org/v1/teams/' + this.value;
     makeRequest(url, requestComplete);
   })
-
 }
 
 var makeRequest = function(url,callback){
